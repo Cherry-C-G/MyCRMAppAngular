@@ -1,0 +1,126 @@
+<form #addEmployee="ngForm" (submit)="insertEmployee(addEmployee)">
+  <div class="row">
+    <div class="col-4">
+      <div class="mb-3">
+        <label for="txtFName">First Name</label>
+        <input id="txtFName" [(ngModel)]="employee.firstName" name="firstName" class="form-control" />
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="mb-3">
+        <label for="txtLName">Last Name</label>
+        <input id="txtLName" [(ngModel)]="employee.lastName" name="lastName" class="form-control" />
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="mb-3">
+        <label for="txtCity">City</label>
+        <input id="txtCity" [(ngModel)]="employee.city" name="city" class="form-control" />
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4">
+
+      <div class="mb-3">
+        <label for="txtTitle">Title</label>
+        <input id="txtTitle" [(ngModel)]="employee.title" name="title" class="form-control" />
+      </div>
+    </div>
+
+    <div class="col-4">
+      <div class="mb-3">
+        <label for="txtCourtesy">Title Of Courtesy</label>
+        <input id="txtCourtesy" [(ngModel)]="employee.titleOfCourtesy" name="titleOfCourtesy" class="form-control" />
+      </div>
+
+    </div>
+
+    <div class="col-4">
+      <div class="mb-3">
+        <label for="txtHiredate">Hire Date</label>
+        <input type="date" id="txtHiredate" [(ngModel)]="employee.hireDate" name="hiredate" class="form-control" />
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4">
+      <div class="mb-3">
+        <label for="txtbirthdate">Birth Date</label>
+        <input type="date" id="txtBirthdate" [(ngModel)]="employee.birthDate" name="birthDate" class="form-control" />
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="mb-3">
+        <label for="ddlReports">Reports To</label>
+        <select id="ddlReports" [(ngModel)]="employee.reportsTo" name="reports" class="form-control">
+          <option value="0">Select</option>
+          <option value="1">Olivia</option>
+          <option value="2">Sarah</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="mb-3">
+        <label for="ddlRegion">Region</label>
+        <select id="ddlRegion" [(ngModel)]="employee.region" name="region" class="form-control">
+          <option value="0">Southern</option>
+          <option value="1">Eastern</option>
+          <option value="2">Northern</option>
+          <option value="3">Western</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-4">
+      <div class="mb-3">
+        <label for="txtPhotoPath">Photo Path</label>
+        <input id="txtPhotoPath" [(ngModel)]="employee.photoPath" name="photoPath" class="form-control" />
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="mb-3">
+        <label for="txtAddress">Address</label>
+        <input id="txtAddress" [(ngModel)]="employee.address" name="address" class="form-control" />
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="mb-3">
+        <label for="ddlRegionId">Region Id</label>
+        <select id="ddlRegionId" [(ngModel)]="employee.regionId" name="regionId" class="form-control">
+          <option value="0">0.Southern</option>
+          <option value="1">1.Eastern</option>
+          <option value="2">2.Northern</option>
+          <option value="3">3.Western</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-4">
+      <div class="mb-3">
+        <label for="txtPostalCode">Postal Code</label>
+        <input id="txtPostalCode" [(ngModel)]="employee.postalCode" name="postalCode" class="form-control" />
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="mb-3">
+        <label for="txtCountry">Country</label>
+        <input id="txtCountry" [(ngModel)]="employee.country" name="country" class="form-control" />
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="mb-3">
+        <label for="txtPhone">Phone</label>
+        <input id="txtPhone" [(ngModel)]="employee.phone" name="phone" class="form-control" />
+      </div>
+    </div>
+  </div>
+
+
+  <input type="submit" value="Add Employee" class="btn btn-primary" />
+  <input type="button" value="Cancel" class="btn btn-default" (click)="resetPage(addEmployee)" />
+</form>
